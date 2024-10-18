@@ -1,0 +1,142 @@
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+
+    .company-name {
+        color: grey;
+        font-size: 16px;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.action-buttons {
+    margin-bottom: 24px;
+
+    button {
+        margin-right: 8px; // Butonlar arasında boşluk
+    }
+}
+
+.job-description {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.responsibilities-title,
+.requirements-title {
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.responsibilities-list,
+.requirements-list {
+    padding-left: 16px;
+
+    li {
+        margin-bottom: 8px; // Liste elemanları arasında boşluk
+    }
+}
+
+.salary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    .salary {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 13px;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-right: 10px;
+    color: #000;
+    border: none;
+    background-color: #f5f5f5;
+
+}
+
+.job-details-button {
+    background-color: #14997c;
+    // padding: 8px 15px;
+    width: 170px;
+    height: 40px;
+    border: none;
+    margin: 0 !important;
+}
+
+.about-company-button {
+    background-color: transparent;
+    // padding: 8px 15px;
+    width: 170px;
+    height: 40px;
+
+    margin: 0 !important;
+    border: none;
+
+    &:hover {
+        background-color: #8989893e;
+        color: #000;
+    }
+
+    // margin-top: 8px;
+}
+
+.action-buttons {
+    background-color: #e7e7e9;
+    // padding: 10px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 6px 2px;
+    border-radius: 8px;
+}
+
+.apply-button {
+    background-color: #14997c;
+    border: 1px solid #14997c;
+    color: white;
+    // padding: 15px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #14997c;
+        opacity: 0.8;
+    }
+}
+
+.cancel-button {
+    background-color: transparent;
+    border: 1px solid #171717;
+    color: #171717 !important;
+    font-weight: bold;
+    color: white;
+    // padding: 15px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #6e6e6e29;
+    }
+}

@@ -1,0 +1,31 @@
+.app-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main-content router-outlet {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.content-area {
+    padding: 24px;
+    background-color: #f0f2f5;
+    min-height: calc(100vh - 64px);
+    /* Header'ı çıkarıp içerik alanını ayarladık */
+}
+
+.content-wrapper {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* Hafif gölge efekti */
+}

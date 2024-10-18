@@ -1,0 +1,25 @@
+<main class="main">
+  <section class="container">
+    <div class="search-bar">
+      <input type="text" placeholder="Vakansiya axtar...">
+      <button>Search</button>
+    </div>
+    <div class="jobs-list">
+      @for (item of data; track $index) {
+
+      <app-jobs-item (onOpenApply)="onOpenApply($event)" [item]="item"></app-jobs-item>
+      }
+      <!-- <app-test></app-test> -->
+      <app-applications-modal (onClose)="onCloseApply($event)" [id]="id"
+        [isVisible]="visibleApply"></app-applications-modal>
+
+      <!-- <app-jobs-item></app-jobs-item>
+      <app-jobs-item></app-jobs-item>
+      <app-jobs-item></app-jobs-item>
+      <app-jobs-item></app-jobs-item>
+      <app-jobs-item></app-jobs-item>
+      <app-jobs-item></app-jobs-item>
+      <app-jobs-item></app-jobs-item> -->
+    </div>
+  </section>
+</main>

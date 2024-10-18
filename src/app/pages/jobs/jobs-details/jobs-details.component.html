@@ -1,0 +1,54 @@
+<nz-drawer [nzVisible]="visible" [nzWidth]="450" [nzClosable]="false" (nzOnClose)="close()">
+  <div style="display: flex; align-items: center;flex-direction: column; justify-content: center; row-gap: 20px;"
+    *nzDrawerContent>
+    <div>
+      <img style="width: 100px;height: 100px;" src="../../../../assets/icons/pasha-insurance.webp" alt="">
+    </div>
+    <p class="job-title" style="text-align: center;">
+      {{ item.jobTitle }} <br />
+      <span class="company-name">{{ item.company.name }}</span>
+    </p>
+
+    <div class="tags">
+      <ng-container *ngFor="let tag of item.tags">
+        <nz-tag class="tag">{{ tag }}</nz-tag>
+      </ng-container>
+    </div>
+
+    <div class="action-buttons">
+      <button nz-button nzType="primary" class="job-details-button">Vakansiya Detalları</button>
+      <button nz-button class="about-company-button">Şirkətin haqqında</button>
+    </div>
+
+    <div>
+      <p class="responsibilities-title">Vakansiya haqqında</p>
+
+      <p class="job-description">{{ item.description }}</p>
+
+      <p class="responsibilities-title">Bacarıqlar</p>
+      <ul class="responsibilities-list">
+        <li *ngFor="let responsibility of item.responsibilities">
+          {{ responsibility }}
+        </li>
+      </ul>
+
+      <p class="requirements-title">Tələblər</p>
+      <ul class="requirements-list">
+        <li *ngFor="let requirement of item.requirements">
+          {{ requirement }}
+        </li>
+
+      </ul>
+
+      <div class="salary-container">
+
+        <button nz-button class="cancel-button" nzType="default" (click)="close()">Ləğv et</button>
+        <button nz-button nzType="primary" class="apply-button" (click)="onOpenApply(item._id,item.category)">Müraciət
+          et</button>
+      </div>
+    </div>
+  </div>
+</nz-drawer>
+
+<app-applications-modal (onClose)="onCloseApply($event)" [id]="id" [isVisible]="visibleApply"
+  [category]="category"></app-applications-modal>

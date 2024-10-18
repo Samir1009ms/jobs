@@ -1,0 +1,31 @@
+<div class="job-card">
+  <div class="job-header">
+    <div>
+      <img style="width: 80px ;height: 80px;" src="../../../../assets/icons/pasha-insurance.webp" alt="">
+    </div>
+    <div class="job-info" (click)="onOpen(item)">
+      <h3>{{item.jobTitle}}</h3>
+      <p>{{item.company.name}}</p>
+    </div>
+  </div>
+  <div class="job-tags">
+    @for (item of item.tags; track $index) {
+    <span class="tag">{{item}}</span>
+    }
+  </div>
+  <div class="job-description">
+    <p>
+      {{item.description}}
+    </p>
+  </div>
+  <div class="job-footer">
+    <div class="salary">
+      <strong>{{item.salary.amount}} {{item.salary.currency}} / {{item.salary.frequency}}</strong>
+    </div>
+    <div class="apply-button">
+      <!-- <button (click)="openApply(item._id, item.category)">Apply Now</button> -->
+    </div>
+  </div>
+</div>
+
+<app-jobs-details (onClose)="onClose()" [item]="item" [visible]="visible"></app-jobs-details>

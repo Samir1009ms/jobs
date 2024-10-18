@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    // padding-bottom: 25px;
+}
+
+.job-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    &:hover {
+        // transform: translateY(-5px);
+    }
+
+    .job-header {
+        display: flex;
+        align-items: center;
+
+
+        .job-info {
+            margin-left: 10px;
+            cursor: pointer;
+
+            &:hover {
+                h3 {
+                    color: #14997c;
+                }
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 18px;
+
+            }
+
+            p {
+                margin: 5px 0 0;
+                color: #888;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .job-tags {
+        margin-top: 10px;
+
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 8px;
+            margin-right: 10px;
+            color: #000;
+
+            background-color: #efefef;
+
+            &.onsite {}
+
+            &.expert {
+                background-color: #f6f6f6;
+
+            }
+
+            &.fulltime {
+                background-color: #f6f6f6;
+
+            }
+        }
+    }
+
+    .job-description {
+        margin: 15px 0;
+        font-size: 14px;
+        color: #666;
+        height: inherit;
+    }
+
+    .job-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .salary {
+            font-size: 16px;
+            // background-color: #14997c;
+            color: #14997c;
+        }
+
+        .apply-button {
+            button {
+                background-color: #14997c;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #1b66c9;
+                }
+            }
+        }
+    }
+}

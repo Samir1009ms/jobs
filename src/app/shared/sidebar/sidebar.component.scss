@@ -1,0 +1,140 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+    &-header {
+        padding: 20px 40px;
+        background-color: #fff;
+        // border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+
+            h1 {
+                font-size: 24px;
+                color: #4f46e5;
+                /* Ana renk, isteğe göre ayarlanabilir */
+                margin: 0;
+            }
+        }
+    }
+
+    /* Main Menu Heading */
+    &-main-menu {
+        padding: 15px 20px;
+        // border-bottom: 1px solid #e0e0e0;
+
+        h2 {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+    }
+
+    &-body {
+        padding: 0 20px 20px;
+        flex-grow: 1;
+        overflow-y: auto;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin: 10px 0;
+                position: relative;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #333;
+                    font-size: 16px;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+
+                    img {
+                        margin-right: 10px;
+                        color: #4f46e5;
+                    }
+
+                    &:hover,
+                    &.active {
+                        background-color: #f6f6f6;
+
+                        // border-left: 1px solid #4daa57;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 4px;
+                            height: 100%;
+                            background-color: #14997c;
+                            border-radius: 8px;
+                        }
+
+                        color: #4f46e5;
+
+                        i {
+                            color: #4f46e5;
+                            /* Hover veya aktif durumda ikon rengi */
+                        }
+                    }
+                }
+
+                .notification {
+                    position: absolute;
+                    top: 50%;
+                    right: 15px;
+                    transform: translateY(-50%);
+                    background-color: #ff3d00;
+                    color: #fff;
+                    font-size: 12px;
+                    padding: 2px 8px;
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-top: 1px solid #e0e0e0;
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+
+            i {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: #e0e0e0;
+            }
+        }
+    }
+}
