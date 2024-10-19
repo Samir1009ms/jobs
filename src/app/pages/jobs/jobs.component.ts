@@ -18,6 +18,7 @@ export class JobsComponent {
     this.visibleApply = false
   }
   onOpenApply(data: { id: any; category: any }): void {
+    console.log(data.id, data.category);
     this.category = data.category
     this.id = data.id
     this.visibleApply = true

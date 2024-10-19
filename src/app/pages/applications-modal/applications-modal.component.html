@@ -1,4 +1,4 @@
-<nz-modal [(nzVisible)]="isVisible" nzTitle="Job Application" (nzOnCancel)="handleCancel()">
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Vakansiyaya müraciət" (nzOnCancel)="handleCancel()">
   <div *nzModalContent>
     <nz-steps [nzCurrent]="currentStep" nzSize="small">
       <nz-step nzTitle="Şəxsi məlumatlar"></nz-step>
@@ -13,7 +13,8 @@
             <label>
               Ad Soyad:
             </label>
-            <input type="text" formControlName="fullName" name="fullName" [(ngModel)]="userData.fullName" required />
+            <input type="text" formControlName="fullName" name="fullName" placeholder="Ad və soyad daxil edin"
+              [(ngModel)]="userData.fullName" required />
             <small *ngIf="myForm.controls['fullName'].invalid && myForm.controls['fullName'].touched">
               Ad və Soyad daxil edin
             </small>
@@ -23,7 +24,8 @@
               Email:
 
             </label>
-            <input type="email" formControlName="email" name="email" [(ngModel)]="userData.email" required />
+            <input type="email" formControlName="email" name="email" placeholder="Email daxil edin"
+              [(ngModel)]="userData.email" required />
             <small *ngIf="myForm.controls['email'].invalid && myForm.controls['email'].touched">
               Email daxil edin
             </small>
@@ -32,7 +34,7 @@
             <label>
               Telefon:
             </label>
-            <input type="tel" name="phone" formControlName="phone" appPhoneMask placeholder="(055) - 555-55-55"
+            <input type="tel" name="phone" formControlName="phone" appPhoneMask placeholder="(055) - 555-5555"
               [(ngModel)]="userData.phone" required />
             <small *ngIf="myForm.controls['phone'].invalid && myForm.controls['phone'].touched">
               telefon daxil edin
